@@ -94,7 +94,7 @@ protected:
 
     ListNode* front() const { return mCount > 0 ? mStartEnd.mNext : nullptr; }
     ListNode* back() const { return mCount > 0 ? mStartEnd.mPrev : nullptr; }
-    ListNode* nth(int n) const;
+    ListNode* nth(s32 n) const;
     s32 indexOf(const ListNode*) const;
 
     void swap(ListNode* n1, ListNode* n2);
