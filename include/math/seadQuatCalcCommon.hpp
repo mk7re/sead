@@ -6,6 +6,7 @@
 
 #include <limits>
 #include <math/seadMathCalcCommon.h>
+#include <math/seadVectorCalcCommon.h>
 
 namespace sead
 {
@@ -114,6 +115,12 @@ inline bool QuatCalcCommon<T>::makeVectorRotation(Base& q, const Vec3& from, con
         set(q, s * 0.5f, cross.x * rs, cross.y * rs, cross.z * rs);
         return true;
     }
+}
+
+template <typename T>
+inline void QuatCalcCommon<T>::set(Base& q, const Base& other)
+{
+    q = other;
 }
 
 template <typename T>
