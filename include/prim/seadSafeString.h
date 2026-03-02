@@ -82,7 +82,13 @@ public:
 
     virtual ~SafeStringBase() = default;
 
-    virtual SafeStringBase& operator=(const SafeStringBase& other);
+    SafeStringBase& operator=(const SafeStringBase& other)
+    {
+        if (this != &other) {
+            mStringTop = other.mStringTop;
+        }
+        return *this;
+    }
 
     bool operator==(const SafeStringBase& rhs) const { return isEqual(rhs); }
     bool operator!=(const SafeStringBase& rhs) const { return !(*this == rhs); }
@@ -176,7 +182,7 @@ public:
     BufferedSafeStringBase(const BufferedSafeStringBase&) = default;
     ~BufferedSafeStringBase() override = default;
 
-    BufferedSafeStringBase<T>& operator=(const SafeStringBase<T>& other) override;
+    BufferedSafeStringBase<T>& operator=(const SafeStringBase<T>& other);
 
     const T& operator[](s32 idx) const;
 
@@ -329,7 +335,7 @@ public:
         return *this;
     }
 
-    FixedSafeStringBase& operator=(const SafeStringBase<T>& other) override
+    FixedSafeStringBase& operator=(const SafeStringBase<T>& other)
     {
         this->copy(other);
         return *this;
@@ -377,7 +383,7 @@ public:
         return *this;
     }
 
-    FixedSafeString<L>& operator=(const SafeStringBase<char>& other) override
+    FixedSafeString<L>& operator=(const SafeStringBase<char>& other)
     {
         this->copy(other);
         return *this;
