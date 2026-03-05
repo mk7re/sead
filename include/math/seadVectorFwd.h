@@ -16,6 +16,7 @@ struct Vector3;
 template <typename T>
 struct Vector4;
 
+using Vector2s = Vector2<s16>;
 using Vector2i = Vector2<s32>;
 using Vector2u = Vector2<u32>;
 using Vector2f = Vector2<f32>;
