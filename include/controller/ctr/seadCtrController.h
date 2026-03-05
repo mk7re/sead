@@ -20,7 +20,7 @@ class PadReader {
 
     private:
         u8 field_0x00[0x38];
-}
+};
 
 }
 }
