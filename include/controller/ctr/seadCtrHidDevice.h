@@ -9,7 +9,7 @@ class CtrHidDevice
 {
     public:
         // https://gist.github.com/Nanquitas/d6c920a59c757cf7917c2bffa76de860
-        enum class ButtonEnum {
+        enum class ButtonEnum : u32 {
             BUTTON_A = 0x00000001,
             BUTTON_B = 0x00000002,
             BUTTON_SELECT = 0x00000004,

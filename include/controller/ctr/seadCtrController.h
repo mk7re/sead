@@ -35,7 +35,7 @@ class CtrController : public Controller
 {
     SEAD_RTTI_OVERRIDE(CtrController, Controller)
 public:
-    enum class ButtonEnum {
+    enum class ButtonEnum : u32 {
         BUTTON_A = 0x00000001,
         BUTTON_B = 0x00000002,
         BUTTON_0x00000004 = 0x00000004,
@@ -70,8 +70,8 @@ public:
         BUTTON_0x80000000 = 0x80000000
     };
 
-    explicit Controller(ControllerMgr* mgr);
-    virtual ~Controller();
+    explicit CtrController(ControllerMgr* mgr);
+    virtual ~CtrController();
     void setStickClampMode(nn::hid::CTR::PadReader::StickClampMode);
 
 protected:
