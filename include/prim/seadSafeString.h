@@ -465,7 +465,7 @@ public:
             delete[] this->mStringTop;
     }
 
-    HeapSafeStringBase<T>& operator=(const SafeStringBase<T>& other) override;
+    HeapSafeStringBase<T>& operator=(const SafeStringBase<T>& other);
 };
 
 using HeapSafeString = HeapSafeStringBase<char>;
