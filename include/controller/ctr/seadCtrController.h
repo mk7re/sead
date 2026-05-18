@@ -2,31 +2,7 @@
 
 #include "controller/seadController.h"
 #include "seadCtrHidDevice.h"
-
-// NOTE: This is incomplete. Besides, it should go in nnheaders probably
-namespace nn
-{
-namespace hid
-{
-namespace CTR
-{
-
-class PadReader {
-    public:
-        // TODO: Document modes
-        enum class StickClampMode : u8 {
-            MODE_0
-        };
-
-    private:
-        u8 field_0x00[0x38];
-};
-
-}
-}
-}
-
-//////////////////////////////////////////////////
+#include <nn/hid/hid_DeviceStatus.h>
 
 namespace sead
 {
